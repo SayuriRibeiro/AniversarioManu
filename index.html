@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>15 Anos da Manu 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="15 Anos da Manu 💖">
+  <meta property="og:description" content="Você é nosso convidado especial ✨">
+  <meta property="og:image" content="https://seusite.com/capa.jpg">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<section>
+  <h2>✨ Você é meu convidado ✨</h2>
+  <p>Role para baixo e descubra todos os detalhes 💕</p>
+</section>
+
+<div class="container">
+
+  <header>
+    <h1>Manu – 15 Anos</h1>
+    <p>Um fim de tarde inesquecível te espera ✨</p>
+  </header>
+
+  <section class="info">
+    <h2>📅 Informações</h2>
+    <p>📍 Minha Casa - Av. Orlando Gracco 211, Bairro Colônia</p>
+    <p>🗓️ 14 de Fevereiro de 2026</p>
+    <p>⏰ 16h</p>
+  </section>
+
+  <section>
+    <h2>⏳ Contagem Regressiva</h2>
+    <div class="countdown">
+      <div class="time-box"><span id="days">0</span>dias</div>
+      <div class="time-box"><span id="hours">0</span>h</div>
+      <div class="time-box"><span id="minutes">0</span>min</div>
+      <div class="time-box"><span id="seconds">0</span>s</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📸 Galeria</h2>
+    <div class="gallery">
+      <img src="a/foto1.jpeg">
+      <img src="a/foto2.jpeg">
+      <img src="a/foto3.jpeg">
+      <img src="a/foto4.jpeg">
+      <img src="a/foto5.jpeg">
+      <img src="a/foto6.jpeg">
+    </div>
+  </section>
+
+  <section>
+    <h2>💖 Confirme sua presença</h2>
+      <a 
+        href="https://wa.me/5511950702607?text=Olá!%20Sou%20convidado(a)%20e%20confirmo%20minha%20presença%20nos%2015%20anos%20da%20Manu." 
+        target="_blank"
+        class="btn">
+        Confirmar Presença
+      </a>
+
+</section>
+
+  <footer>
+    Com carinho 💖 Manu.
+  </footer>
+
+</div>
+
+<script>
+  const eventDate = new Date("2026-02-14T16:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = eventDate - now;
+
+    document.getElementById("days").innerText =
+      Math.floor(diff / (1000 * 60 * 60 * 24));
+    document.getElementById("hours").innerText =
+      Math.floor((diff / (1000 * 60 * 60)) % 24);
+    document.getElementById("minutes").innerText =
+      Math.floor((diff / (1000 * 60)) % 60);
+    document.getElementById("seconds").innerText =
+      Math.floor((diff / 1000) % 60);
+  }, 1000);
+</script>
+
+</body>
+</html>
